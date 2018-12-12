@@ -466,7 +466,8 @@ class Breadcrumbs
                 . "{$positionMeta}{$divider}</li>";
         } else {
             return '<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" '
-                . "class=\"{$this->listItemCssClass} active\"><span itemprop=\"name\">{$name}</span>"
+                . "class=\"{$this->listItemCssClass} active\" >"
+                . "<a itemprop=\"item\" href=\"{$href}\"><span itemprop=\"name\">{$name}</span></a>"
                 . "{$positionMeta}</li>";
         }
     }
